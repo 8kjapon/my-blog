@@ -1,1 +1,23 @@
 // Entry point for your Sass build
+body {
+    background-color: #F4F5F7;
+}
+
+header {
+    height: 400px;
+    text-align: center;
+}
+
+main {
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: #FFF;
+    h1 {
+        border-bottom: #242424 solid 5px;
+    }
+}
+
+footer {
+    height: 200px;
+    text-align: center;
+}
