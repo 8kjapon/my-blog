@@ -36,3 +36,6 @@
 /node_modules
 /memo.md
 /blog.code-workspace
+/.env
+/config/credentials
+/config/credentials.yml.enc
