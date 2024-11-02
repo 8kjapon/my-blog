@@ -6,9 +6,9 @@ services:
       - mysql_data:/var/lib/mysql
     environment:
       TZ: Asia/Tokyo
-      MYSQL_ROOT_PASSWORD: password
-    ports:
-      - "3306:3306"
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
 
   web:
     build: .
@@ -21,8 +21,10 @@ services:
       - node_modules:/my-blog/node_modules
     environment:
       TZ: Asia/Tokyo
+      RAILS_ENV: ${RAILS_ENV}
+      RAILS_SERVE_STATIC_FILES: ${RAILS_SERVE_STATIC_FILES}
     ports:
-      - "3000:3000"
+      - "127.0.0.1:3000:3000"
     depends_on:
       - db
 volumes:

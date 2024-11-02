@@ -11,12 +11,12 @@ RUN curl -sL https://deb.nodesource.com/setup_${NODE_VERSION}.x | bash - \
 && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
 && apt-get update -qq \
 && apt-get install -y build-essential nodejs yarn
-RUN mkdir /app
-WORKDIR /app
+RUN mkdir /my-blog
+WORKDIR /my-blog
 RUN gem install bundler -v 2.4.22
-COPY Gemfile /app/Gemfile
-COPY Gemfile.lock /app/Gemfile.lock
-COPY yarn.lock /app/yarn.lock
+COPY Gemfile /my-blog/Gemfile
+COPY Gemfile.lock /my-blog/Gemfile.lock
+COPY yarn.lock /my-blog/yarn.lock
 RUN bundle install
 RUN yarn install
-COPY . /app
+COPY . /my-blog
