@@ -5,7 +5,7 @@ class Admin::BaseController < ApplicationController
   private
 
   def not_authenticated
-    redirect_to login_paht
+    redirect_to login_path
   end
 
   def check_if_admin

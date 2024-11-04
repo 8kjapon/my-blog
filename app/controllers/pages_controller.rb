@@ -1,3 +1,5 @@
 class PagesController < ApplicationController
-  def top; end
+  def top
+    @articles = Article.all
+  end
 end
