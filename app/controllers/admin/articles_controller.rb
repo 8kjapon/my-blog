@@ -18,11 +18,24 @@ class Admin::ArticlesController < Admin::BaseController
     end
   end
 
-  def edit; end
+  def edit
+    @article = Article.find(params[:id])
+  end
 
-  def update; end
+  def update
+    @article = Article.find(params[:id])
+    if @article.update(article_params)
+      redirect_to admin_articles_path
+    else
+      render :edit
+    end
+  end
 
-  def destroy; end
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+    redirect_to admin_articles_path
+  end
 
   private
 
