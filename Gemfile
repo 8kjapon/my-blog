@@ -77,3 +77,5 @@ end
 gem "sorcery"
 
 gem "dotenv-rails"
+
+gem "tinymce-rails"
