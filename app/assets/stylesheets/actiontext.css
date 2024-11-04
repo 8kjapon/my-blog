@@ -29,3 +29,13 @@
   padding: 0 !important;
   max-width: 100% !important;
 }
+
+trix-editor img {
+  display: block;
+  max-width: 100%; /* エディター内に収める */
+  cursor: default; /* 通常時のカーソル */
+}
+
+trix-editor img.resizing {
+  cursor: grabbing; /* リサイズ中のカーソル */
+}
