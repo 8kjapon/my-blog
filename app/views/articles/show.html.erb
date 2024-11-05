@@ -1,0 +1,8 @@
+<article>
+  <h1><%= @article.title %></h1>
+    <div>
+      <%= raw @article.content %>
+      <%# sanitize(article.content, tags: %w(p br h1 h2 h3 strong em b i u ol ul li blockquote img), attributes: %w(href src alt)) %>
+    </div>
+  </div>
+</article>

@@ -16,4 +16,5 @@ Rails.application.routes.draw do
     resources :articles, only: %i[index new create edit update destroy]
     post 'uploader', to: 'uploader#image'
   end
+  resources :articles, only: %i[show]
 end
