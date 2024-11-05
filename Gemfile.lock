@@ -245,6 +245,8 @@ GEM
     timeout (0.4.1)
     tinymce-rails (7.4.1)
       railties (>= 3.1.1)
+    tinymce-rails-langs (7.20240507)
+      tinymce-rails (~> 7.0)
     turbo-rails (2.0.10)
       actionpack (>= 6.0.0)
       railties (>= 6.0.0)
@@ -285,6 +287,7 @@ DEPENDENCIES
   sprockets-rails
   stimulus-rails
   tinymce-rails
+  tinymce-rails-langs
   turbo-rails
   tzinfo-data
   web-console

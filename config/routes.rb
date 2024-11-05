@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   namespace :admin do
     resource :dashboard, only: %i[show]
     resources :articles, only: %i[index new create edit update destroy]
+    post 'uploader', to: 'uploader#image'
   end
 end

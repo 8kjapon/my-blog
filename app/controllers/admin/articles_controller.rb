@@ -12,7 +12,7 @@ class Admin::ArticlesController < Admin::BaseController
   def create
     @article = current_user.articles.build(article_params)
     if @article.save
-      redirect_to admin_dashboards_path
+      redirect_to admin_dashboard_path
     else
       render :new
     end
