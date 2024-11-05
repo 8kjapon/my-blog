@@ -79,3 +79,4 @@ gem "sorcery"
 gem "dotenv-rails"
 
 gem "tinymce-rails"
+gem "tinymce-rails-langs"

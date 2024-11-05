@@ -1,0 +1,25 @@
+toolbar:
+  - blocks | bold italic strikethrough underline blockquote | bullist numlist | alignleft aligncenter alignright alignjustify | link unlink
+  - outdent indent | charmap |forecolor | table | image media | codesample code
+  - undo redo | preview visualblocks | tableofcontents
+plugins:
+  - tableofcontents
+  - link
+  - image
+  - lists
+  - media
+  - code
+  - autosave
+  - advlist
+  - codesample
+  - preview
+  - autolink
+  - charmap
+  - table
+  - visualblocks
+  - wordcount
+language: "ja"
+license_key: "gpl"
+images_upload_url: "/admin/uploader"
+content_css:
+ - "/assets/tinymce_preview.css"
