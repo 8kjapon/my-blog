@@ -1,14 +1,12 @@
-<main class="mb-auto flex-grow-1 container">
-  <div class="jumbotron">
-    <h1>記事一覧</h1>
-    <% @articles.each do |article| %>
-      <div class="article">
-        <h1><%= article.title %></h1>
-        <div>
-          <%= raw article.content %>
-          <%# sanitize(article.content, tags: %w(p br h1 h2 h3 strong em b i u ol ul li blockquote img), attributes: %w(href src alt)) %>
-        </div>
+<div class="jumbotron">
+  <h1>記事一覧</h1>
+  <% @articles.each do |article| %>
+    <article>
+      <h1><%= article.title %></h1>
+      <div>
+        <%= raw article.content %>
+        <%# sanitize(article.content, tags: %w(p br h1 h2 h3 strong em b i u ol ul li blockquote img), attributes: %w(href src alt)) %>
       </div>
-    <% end %>
-  </div>
-</main>
+    </article>
+  <% end %>
+</div>

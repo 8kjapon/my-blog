@@ -1,6 +1,6 @@
 toolbar:
   - blocks | bold italic strikethrough underline blockquote | bullist numlist | alignleft aligncenter alignright alignjustify | link unlink
-  - outdent indent | charmap |forecolor | table | image media | codesample code
+  - outdent indent | charmap |forecolor | table | image media | codesample code codesample-custom
   - undo redo | preview visualblocks | tableofcontents
 plugins:
   - tableofcontents
@@ -18,8 +18,21 @@ plugins:
   - table
   - visualblocks
   - wordcount
+  - codesample-custom
 language: "ja"
 license_key: "gpl"
 images_upload_url: "/admin/uploader"
 content_css:
  - "/assets/tinymce_preview.css"
+setup: |
+  function (editor) {
+    editor.ui.registry.addButton('codesample-custom', {
+      text: 'コードブロック',
+      icon: 'code-sample',
+      onAction: function () {
+        const selectedText = editor.selection.getContent({ format: 'text' });
+        const wrappedText = `<div class="code-frame"><pre><code>${selectedText}</code></pre></div>`;
+        editor.insertContent(wrappedText);
+      }
+    });
+  }
