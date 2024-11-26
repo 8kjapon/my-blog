@@ -4,15 +4,24 @@ body {
 }
 
 header {
-    height: 400px;
-    text-align: center;
+    .navbar-brand {
+        font-size: 24px;
+    }
+    .nav-link {
+        padding: 4px 12px;
+        margin: 4px 0;
+    }
+}
+
+.container {
+    max-width: 800px;
 }
 
 main {
-    width: 800px;
     margin-left: auto;
     margin-right: auto;
     padding: 16px 24px;
+    flex: 1;
 }
 
 article {
@@ -33,6 +42,8 @@ article {
     }
     h3 {
         border-bottom: #242424 solid 1px;
+        border-left: #242424 solid 5px;
+        padding-left: 5px;
         margin-top: 40px;
         margin-bottom: 16px;
     }
@@ -42,26 +53,50 @@ article {
         display: block;
         margin: 0 auto;
     }
+    .article-date {
+        color: #666665;
+    }
     .code-frame {
         background-color: #1D2020;
         color: #FEFFFE;
         margin: 24px -16px;
         padding: 8px 16px;
         border-radius: 8px;
+        overflow: auto;
         pre {
             margin: auto 0;
             padding: 8px 0;
+            white-space: pre;
             code {
-                white-space: pre-wrap;
                 font-family: monospace;
             }
         }
     }
 }
 
+.article-list-element {
+    margin: 16px 0;
+    padding: 0;
+    h3 {
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+    a {
+        text-decoration: none;
+        color: #1D2020;
+    }
+    .element-area {
+        padding: 16px 24px;
+    }
+}
+
 footer {
-    height: 200px;
-    text-align: center;
+    padding: 24px 16px;
+    p {
+        margin: 4px 0;
+        font-size: 0.8em;
+    }
 }
 
 @import 'actiontext.css';

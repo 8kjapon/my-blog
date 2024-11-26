@@ -2,7 +2,7 @@ class Admin::ArticlesController < Admin::BaseController
   layout 'admin'
 
   def index
-    @articles = Article.all
+    @articles = Article.all.order(created_at: :desc)
   end
 
   def new

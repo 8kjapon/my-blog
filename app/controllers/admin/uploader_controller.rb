@@ -9,7 +9,7 @@ class Admin::UploaderController < ApplicationController
       content_type: params[:file].content_type
     )
 
-    render json: {location: url_for(blob)}, content_type: "text/html"
+    render json: { location: rails_blob_url(blob, only_path: false) }, content_type: "text/html"
   rescue => e
     render json: { error: e.message }, status: :unprocessable_entity
   end

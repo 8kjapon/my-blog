@@ -1,12 +1,13 @@
-<div class="jumbotron">
+<div class="container">
   <h1>記事一覧</h1>
   <% @articles.each do |article| %>
-    <article>
-      <h1><%= article.title %></h1>
-      <div>
-        <%= raw article.content %>
-        <%# sanitize(article.content, tags: %w(p br h1 h2 h3 strong em b i u ol ul li blockquote img), attributes: %w(href src alt)) %>
-      </div>
+    <article class="article-list-element">
+      <%= link_to article_path(article) do %>
+        <div class="element-area">
+          <span class="article-date"><%= article.created_at.strftime('%Y年%m月%d日') %></span>
+          <h3 class="fs-3"><%= article.title %></h3>
+        </div>
+      <% end %>
     </article>
   <% end %>
 </div>
