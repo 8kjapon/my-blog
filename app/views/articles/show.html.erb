@@ -1,5 +1,6 @@
 <article>
-  <h1><%= @article.title %></h1>
+  <span class="article-date"><%= @article.created_at.strftime('%Y年%m月%d日') %></span>
+  <h1 class="fs-2"><%= @article.title %></h1>
     <div>
       <%= raw @article.content %>
       <%# sanitize(article.content, tags: %w(p br h1 h2 h3 strong em b i u ol ul li blockquote img), attributes: %w(href src alt)) %>
