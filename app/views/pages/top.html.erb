@@ -1,10 +1,13 @@
-<main class="mb-auto flex-grow-1 container">
-  <div class="jumbotron">
-    <h1 class="display-4">h1たぐです</h1>
-    <p class="lead">本文です。</p>
-    <p class="lead"><b>太字です。</b></p>
-    <h2>h2タグです。</h2>
-    <a href="#">aタグです。</a>
-    <h3>h3タグです。</h3>
-  </div>
-</main>
+<div class="container">
+  <h1>記事一覧</h1>
+  <% @articles.each do |article| %>
+    <article class="article-list-element">
+      <%= link_to article_path(article) do %>
+        <div class="element-area">
+          <span class="article-date"><%= article.created_at.strftime('%Y年%m月%d日') %></span>
+          <h3 class="fs-3"><%= article.title %></h3>
+        </div>
+      <% end %>
+    </article>
+  <% end %>
+</div>

@@ -1,3 +1,6 @@
 class PagesController < ApplicationController
-  def top; end
+  skip_before_action :require_login, only: %i[top]
+  def top
+    @articles = Article.all
+  end
 end

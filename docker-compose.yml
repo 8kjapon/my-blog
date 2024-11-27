@@ -16,9 +16,10 @@ services:
     tty: true
     stdin_open: true
     volumes:
-      - .:/app
+      - .:/my-blog
       - bundle_data:/usr/local/bundle:cached
-      - node_modules:/app/node_modules
+      - node_modules:/my-blog/node_modules
+      - ./storage:/my-blog/storage
     environment:
       TZ: Asia/Tokyo
     ports:
