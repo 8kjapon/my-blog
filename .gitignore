@@ -37,6 +37,8 @@
 /memo.md
 /blog.code-workspace
 /.env
+/.env.production
 /config/credentials/*
 !/config/credentials/.keep
 /config/credentials.yml.enc
+/config/credentials/production.key
