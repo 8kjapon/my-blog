@@ -1,5 +1,7 @@
-class Admin::DashboardsController < Admin::BaseController
-  layout 'admin'
+module Admin
+  class DashboardsController < BaseController
+    layout 'admin'
 
-  def show; end
+    def show; end
+  end
 end
