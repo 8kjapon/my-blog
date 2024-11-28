@@ -2,8 +2,7 @@
 <article>
   <h1 class="fs-2">創作物一覧</h1>
     <div>
-      
-      <%# sanitize(article.content, tags: %w(p br h1 h2 h3 strong em b i u ol ul li blockquote img), attributes: %w(href src alt)) %>
+      <%= sanitize(@static_page.content, tags: %w(p br h1 h2 h3 strong em b i u ol ul li a blockquote img iframe div), attributes: %w(href src alt style width height title frameborder allow allowfullscreen target rel)) %>
     </div>
   </div>
 </article>
