@@ -1,13 +1,29 @@
 <div class="container">
-  <h1>記事一覧</h1>
-  <% @articles.each do |article| %>
-    <article class="article-list-element">
-      <%= link_to article_path(article) do %>
-        <div class="element-area">
-          <span class="article-date"><%= article.created_at.strftime('%Y年%m月%d日') %></span>
-          <h3 class="fs-3"><%= article.title %></h3>
-        </div>
-      <% end %>
-    </article>
-  <% end %>
+  <div class="profile mb-4">
+    <h3 class="text-center fs-5"><i class="fa-icon fa-solid fa-address-card"></i>プロフィール</h3>
+    <div class="profile-main">
+      <div class="profile-icon">
+        <%= image_tag asset_url("icon.png") %>
+      </div>
+      <div class="profile-description">
+        <p>ようこそ！8kjapon(ハチケイじゃぽん)と申します。</p>
+        <p>趣味は作曲、プログラミング、音楽鑑賞、映画鑑賞、ゲーム等いっぱいです。</p>
+        <p>このサイトではこれまでの制作でのメモなどを残していきます。</p>
+        <p>誰かの何かの参考になれば幸いです。</p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2 class="text-center">記事一覧</h2>
+    <% @articles.each do |article| %>
+      <article class="article-list-element">
+        <%= link_to article_path(article) do %>
+          <div class="element-area">
+            <span class="article-date"><%= article.created_at.strftime('%Y年%m月%d日') %></span>
+            <h3 class="fs-3"><%= article.title %></h3>
+          </div>
+        <% end %>
+      </article>
+    <% end %>
+  </div>
 </div>
