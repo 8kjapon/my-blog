@@ -26,19 +26,19 @@ img {
 .article-date {
     color: #666665;
 }
-.code-frame {
+pre[class^="language-"],
+pre[class*=" language-"] {
     background-color: #1D2020;
     color: #FEFFFE;
     margin: 24px -16px;
     padding: 8px 16px;
     border-radius: 8px;
     overflow: auto;
-    pre {
+    font-family: monospace;
+    text-shadow: none;
+    code {
         margin: auto 0;
         padding: 8px 0;
         white-space: pre;
-        code {
-            font-family: monospace;
-        }
     }
 }
