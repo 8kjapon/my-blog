@@ -11,6 +11,14 @@ header {
         padding: 4px 12px;
         margin: 4px 0;
     }
+    .nav-icon {
+        margin-right: 0.3em;
+    }
+    .header-menu {
+        p {
+            margin: 0;
+        }
+    }
 }
 
 .container {
@@ -22,6 +30,32 @@ main {
     margin-right: auto;
     padding: 16px 24px;
     flex: 1;
+}
+
+.profile {
+    padding: 16px 24px;
+    background-color: #FFF;
+    border-radius: 8px;
+    .profile-main {
+        display: flex;
+        p {
+            margin: 0;
+        }
+        @media (max-width: 425px) {
+            p {
+                font-size: 0.7em;
+            }
+        }
+    }
+    .fa-icon {
+        margin-right: 0.5em;
+    }
+    .profile-icon {
+        img {
+            max-width: 100px;
+            max-height: 100px;
+        }
+    }
 }
 
 article {

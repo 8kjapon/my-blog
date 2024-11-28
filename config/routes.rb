@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   root "pages#top"
+  get "portfolio", to: 'pages#portfolio'
   resources :users, only: [:new, :create]
   # get 'signup', to: 'users#new'
   # post 'signup', to: 'users#create'
@@ -15,6 +16,7 @@ Rails.application.routes.draw do
     root "dashboards#show"
     resource :dashboard, only: %i[show]
     resources :articles, only: %i[index new create edit update destroy]
+    resources :static_pages, only: %i[index new create edit update destroy]
     post 'uploader', to: 'uploader#image'
   end
   resources :articles, only: %i[show]
