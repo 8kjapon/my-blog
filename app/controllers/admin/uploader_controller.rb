@@ -3,7 +3,7 @@ module Admin
     protect_from_forgery with: :null_session, only: %i[image]
     before_action :verify_authenticity_token, except: %i[image]
 
-    def image   
+    def image
       blob = ActiveStorage::Blob.create_and_upload!(
         io: params[:file].tempfile,
         filename: params[:file].original_filename,
