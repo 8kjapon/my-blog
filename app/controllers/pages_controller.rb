@@ -3,4 +3,6 @@ class PagesController < ApplicationController
   def top
     @articles = Article.all
   end
+
+  def portfolio; end
 end
