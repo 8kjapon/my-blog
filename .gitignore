@@ -33,6 +33,9 @@
 /app/assets/builds/*
 !/app/assets/builds/.keep
 
+/app/assets/images/*
+!/app/assets/images/.keep
+
 /node_modules
 /memo.md
 /blog.code-workspace
