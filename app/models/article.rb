@@ -8,6 +8,6 @@ class Article < ApplicationRecord
   validates :title, presence: true, uniqueness: true, length: { maximum: 255 }
 
   def should_generate_new_friendly_id?
-    title_changed?
+    slug.blank? || title_changed?
   end
 end
