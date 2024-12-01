@@ -16,6 +16,10 @@
           <%= form.text_field :title, class: "form-control" %>
         </div>
         <div class="mb-4">
+          <%= form.label :slug, class: "form-label" %>
+          <%= form.text_field :slug, class: "form-control" %>
+        </div>
+        <div class="mb-4">
           <%= form.label :content, class: "form-label" %>
           <%= form.text_area :content, class: "tinymce", rows: 40 %>
         </div>
