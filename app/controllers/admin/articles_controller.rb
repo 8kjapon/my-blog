@@ -11,7 +11,7 @@ module Admin
     end
 
     def edit
-      @article = Article.find(params[:id])
+      @article = Article.friendly.find(params[:id])
     end
 
     def create
@@ -24,7 +24,7 @@ module Admin
     end
 
     def update
-      @article = Article.find(params[:id])
+      @article = Article.friendly.find(params[:id])
       if @article.update(article_params)
         redirect_to admin_articles_path
       else
@@ -33,7 +33,7 @@ module Admin
     end
 
     def destroy
-      @article = Article.find(params[:id])
+      @article = Article.friendly.find(params[:id])
       @article.destroy
       redirect_to admin_articles_path
     end
@@ -41,7 +41,7 @@ module Admin
     private
 
     def article_params
-      params.require(:article).permit(:title, :content)
+      params.require(:article).permit(:title, :content, :slug)
     end
   end
 end
