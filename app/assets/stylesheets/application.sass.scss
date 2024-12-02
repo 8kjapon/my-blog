@@ -106,6 +106,9 @@ article {
             white-space: pre;
         }
     }
+    @media (max-width: 425px) {
+        padding: 12px 24px;
+    }
 }
 
 .article-list-element {
