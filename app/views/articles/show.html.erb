@@ -2,8 +2,19 @@
 <article>
   <span class="article-date"><%= @article.created_at.strftime('%Y年%m月%d日') %></span>
   <h1 class="fs-2"><%= @article.title %></h1>
+  <div class="d-flex share-area">
+    <p>共有:</p>
     <div>
-      <%= sanitize(@article.content, tags: %w(p br h1 h2 h3 strong em b i u ol ul li a blockquote img iframe div pre code), attributes: %w(href src alt style width height title frameborder allow allowfullscreen target rel class)) %>
+      <%= link_to "https://twitter.com/intent/tweet?text=#{URI.encode_www_form_component("8kjapon | #{@article.title}")}&url=#{URI.encode_www_form_component(request.original_url)}", target: "_blank", rel: "noopener", class: "share-button share-button-twitter" do %>
+        <i class="fa-brands fa-x-twitter"></i>
+        <span>Twitter(X)</span>
+      <% end %>
+      <%= link_to "https://social-plugins.line.me/lineit/share?url=#{CGI.escape(request.original_url)}", target: "_blank", rel: "noopener", class: "share-button share-button-line" do %>
+        <span>LINE</span>
+      <% end %>
     </div>
+  </div>
+  <div>
+    <%= sanitize(@article.content, tags: %w(p br h1 h2 h3 strong em b i u ol ul li a blockquote img iframe div pre code), attributes: %w(href src alt style width height title frameborder allow allowfullscreen target rel class)) %>
   </div>
 </article>
