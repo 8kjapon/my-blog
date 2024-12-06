@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :require_login, only: %i[top, portfolio]
+  skip_before_action :require_login, only: %i[top portfolio]
   def top
     @articles = Article.order(created_at: :desc)
   end
