@@ -122,6 +122,30 @@ article {
         display: block;
         margin: 0 auto;
     }
+    thead {
+        display: table-header-group;
+        vertical-align: middle;
+    }
+    tbody {
+        display: table-row-group;
+        vertical-align: middle;
+    }
+    tr {
+        display: table-row;
+        vertical-align: inherit;
+        border: solid 1px;
+    }
+    th, td {
+        display: table-cell;
+        vertical-align: inherit;
+        border: solid 1px;
+        text-align: center;
+    }
+    table {
+        border-collapse: collapse;
+        max-width: 100%;
+        border-color: #666665;
+    }
     .share-area {
         margin-bottom: 48px;
     }
