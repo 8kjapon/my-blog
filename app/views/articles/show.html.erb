@@ -15,6 +15,6 @@
     </div>
   </div>
   <div>
-    <%= sanitize(@article.content, tags: %w(p br h1 h2 h3 strong em b i u ol ul li a blockquote img iframe div pre code table colgroup col tbody tr td), attributes: %w(href src alt style width height title frameborder allow allowfullscreen target rel class)) %>
+    <%= sanitize(@article.content, tags: %w(p br h1 h2 h3 strong em b i u ol ul li a s blockquote img iframe div pre code table colgroup col tbody tr td), attributes: %w(href src alt style width height title frameborder allow allowfullscreen target rel class)) %>
   </div>
 </article>
