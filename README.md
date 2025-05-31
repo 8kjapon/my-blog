@@ -3,7 +3,7 @@
 
 ## 運用先
 個人ブログになります。
-[8kjapon.com](https://www.8kjapon.com/)
+~~[8kjapon.com](https://www.8kjapon.com/)~~ ただいま利用しているサーバーの関係により一時的に公開を中止しております。ご了承ください。
 
 ## 使用技術
 - Ruby on Rails
